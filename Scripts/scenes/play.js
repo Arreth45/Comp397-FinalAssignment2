@@ -20,7 +20,7 @@ var scenes;
         // Start Method
         Play.prototype.start = function () {
             // Set Cloud Count
-            this._enemyCount = 3;
+            this._enemyCount = 2;
             livesValue = 5;
             scoreValue = 0;
             // Instantiate Cloud array
@@ -60,6 +60,10 @@ var scenes;
             });
             this._collision.check(this._blackBox);
             this._updateScore();
+            if (scoreValue > 500) {
+                scene = config.Scene.LEVEL2;
+                changeScene();
+            }
         };
         return Play;
     })(objects.Scene);

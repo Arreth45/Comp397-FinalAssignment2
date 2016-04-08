@@ -17,7 +17,9 @@ var highScoreValue: number = 0;
 var menu: scenes.Menu;
 var instruction: scenes.Instruction;
 var play: scenes.Play;
+var level2: scenes.Level2;
 var end: scenes.End;
+var exit: scenes.Exit;
 
 var assetData: objects.Asset[] = [
     // Add your Assets here
@@ -26,6 +28,8 @@ var assetData: objects.Asset[] = [
     { id: "InstructionButton", src: "../../Assets/images/instructions.png" },
     { id: "ExitButton", src: "../../Assets/images/exit.png" },
     { id: "forest", src: "../../Assets/images/forest.png" },
+    { id: "desert", src: "../../Assets/images/desert.png" },
+    { id: "space", src: "../../Assets/images/space.png" },
     { id: "plane", src: "../../Assets/images/player.png" },
     { id: "enemy1", src: "../../Assets/images/enemy1.png" },
     { id: "blackBox", src: "../../Assets/images/blackBox.png" },
@@ -103,7 +107,7 @@ function changeScene(): void {
             currentScene = menu;
             console.log("Starting MENU Scene");
             break;
-            case config.Scene.INSTRUCTION:
+        case config.Scene.INSTRUCTION:
             // show the MENU scene
             stage.removeAllChildren();
             instruction = new scenes.Instruction();
@@ -117,6 +121,13 @@ function changeScene(): void {
             currentScene = play;
             console.log("Starting PLAY Scene");
             break;
+        case config.Scene.LEVEL2:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            level2 = new scenes.Level2();
+            currentScene = level2;
+            console.log("Starting LEVEL2 Scene");
+            break;
         case config.Scene.END:
             // show the END scene
             stage.removeAllChildren();
@@ -124,8 +135,14 @@ function changeScene(): void {
             currentScene = end;
             console.log("Starting END Scene");
             break;
+        case config.Scene.EXIT:
+            // show the END scene
+            stage.removeAllChildren();
+            exit = new scenes.Exit();
+            currentScene = exit;
+            console.log("Starting END Scene");
+            break;
     }
-
     console.log(currentScene.numChildren);
 }
 

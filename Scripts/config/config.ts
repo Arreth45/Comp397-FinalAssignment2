@@ -5,7 +5,10 @@
         public static MENU: number = 0;
         public static INSTRUCTION: number = 1;
         public static PLAY: number = 2;
-        public static END: number = 3;
+        public static LEVEL2: number = 3;
+        public static LEVEL3: number = 4;
+        public static END: number = 5;
+        public static EXIT: number = 6;
 
     }
 

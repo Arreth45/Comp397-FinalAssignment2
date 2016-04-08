@@ -53,7 +53,7 @@ var scenes;
         };
         Menu.prototype.___exitButtonClick = function (event) {
             // Switch to the LEFT_CAVE Scene
-            scene = config.Scene.END;
+            scene = config.Scene.EXIT;
             changeScene();
         };
         return Menu;
