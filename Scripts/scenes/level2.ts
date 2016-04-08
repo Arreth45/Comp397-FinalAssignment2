@@ -4,7 +4,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _desert: objects.Desert;
         private _blackBox: objects.BlackBox;
-        private _enemy: objects.Enemy1[];
+        private _enemy: objects.Enemy2[];
         private _enemyCount: number;
         private _player: objects.Player;
         private _collision: managers.Collision;
@@ -32,7 +32,7 @@ module scenes {
             scoreValue = 0;
 
             // Instantiate Cloud array
-            this._enemy = new Array<objects.Enemy1>();
+            this._enemy = new Array<objects.Enemy2>();
 
             // added ocean to the scene
             this._desert = new objects.Desert();
@@ -48,7 +48,7 @@ module scenes {
 
             //added clouds to the scene
             for (var enemy: number = 0; enemy < this._enemyCount; enemy++) {
-                this._enemy[enemy] = new objects.Enemy1();
+                this._enemy[enemy] = new objects.Enemy2();
                 this.addChild(this._enemy[enemy]);
             }
 
