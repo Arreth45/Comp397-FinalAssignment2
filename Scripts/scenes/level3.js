@@ -6,19 +6,19 @@ var __extends = (this && this.__extends) || function (d, b) {
 // PLAY SCENE
 var scenes;
 (function (scenes) {
-    var Level2 = (function (_super) {
-        __extends(Level2, _super);
+    var Level3 = (function (_super) {
+        __extends(Level3, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Level2() {
+        function Level3() {
             _super.call(this);
         }
-        Level2.prototype._updateScore = function () {
+        Level3.prototype._updateScore = function () {
             this._livesLabel.text = "Lives: " + livesValue;
             this._scoreLabel.text = "Score: " + scoreValue;
         };
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Level2.prototype.start = function () {
+        Level3.prototype.start = function () {
             // Set Cloud Count
             this._enemyCount = 3;
             livesValue = 5;
@@ -26,8 +26,8 @@ var scenes;
             // Instantiate Cloud array
             this._enemy = new Array();
             // added ocean to the scene
-            this._desert = new objects.Desert();
-            this.addChild(this._desert);
+            this._space = new objects.Space();
+            this.addChild(this._space);
             // added island to the scene
             this._artifact = new objects.Artifact();
             this.addChild(this._artifact);
@@ -36,7 +36,7 @@ var scenes;
             this.addChild(this._player);
             //added clouds to the scene
             for (var enemy = 0; enemy < this._enemyCount; enemy++) {
-                this._enemy[enemy] = new objects.Enemy2();
+                this._enemy[enemy] = new objects.Enemy3();
                 this.addChild(this._enemy[enemy]);
             }
             this._livesLabel = new objects.Label("lives: " + livesValue, "40px Consolas", "#ffff00", 10, 10, false);
@@ -49,9 +49,9 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Level2.prototype.update = function () {
+        Level3.prototype.update = function () {
             var _this = this;
-            this._desert.update();
+            this._space.update();
             this._artifact.update();
             this._player.update();
             this._enemy.forEach(function (enemy) {
@@ -61,8 +61,8 @@ var scenes;
             this._collision.check(this._artifact);
             this._updateScore();
         };
-        return Level2;
+        return Level3;
     })(objects.Scene);
-    scenes.Level2 = Level2;
+    scenes.Level3 = Level3;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=level2.js.map
+//# sourceMappingURL=level3.js.map

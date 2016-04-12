@@ -22,13 +22,25 @@ var managers;
               the other object is less than the minimum distance */
             if (this.distance(startPoint, endPoint) < minimumDistance) {
                 if (!object.isColliding) {
-                    // check if it's an island hit
+                    // check if it's an collectable hit
                     if (object.name === "blackBox") {
                         createjs.Sound.play("pickup");
                         scoreValue += 100;
                     }
-                    // check if it's a cloud hit
+                    if (object.name === "artifact") {
+                        createjs.Sound.play("pickup");
+                        scoreValue += 100;
+                    }
+                    // check if it's a enemy hit
                     if (object.name === "enemy1") {
+                        createjs.Sound.play("explosion");
+                        livesValue--;
+                        if (livesValue <= 0) {
+                            scene = config.Scene.END;
+                            changeScene();
+                        }
+                    }
+                    if (object.name === "enemy2") {
                         createjs.Sound.play("explosion");
                         livesValue--;
                         if (livesValue <= 0) {

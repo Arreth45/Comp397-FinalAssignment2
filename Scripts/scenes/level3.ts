@@ -1,10 +1,10 @@
 // PLAY SCENE
 module scenes {
-    export class Level2 extends objects.Scene {
+    export class Level3 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _desert: objects.Desert;
+        private _space: objects.Space;
         private _artifact: objects.Artifact;
-        private _enemy: objects.Enemy2[];
+        private _enemy: objects.Enemy3[];
         private _enemyCount: number;
         private _player: objects.Player;
         private _collision: managers.Collision;
@@ -32,11 +32,11 @@ module scenes {
             scoreValue = 0;
 
             // Instantiate Cloud array
-            this._enemy = new Array<objects.Enemy2>();
+            this._enemy = new Array<objects.Enemy3>();
 
             // added ocean to the scene
-            this._desert = new objects.Desert();
-            this.addChild(this._desert);
+            this._space = new objects.Space();
+            this.addChild(this._space);
 
             // added island to the scene
             this._artifact = new objects.Artifact();
@@ -48,7 +48,7 @@ module scenes {
 
             //added clouds to the scene
             for (var enemy: number = 0; enemy < this._enemyCount; enemy++) {
-                this._enemy[enemy] = new objects.Enemy2();
+                this._enemy[enemy] = new objects.Enemy3();
                 this.addChild(this._enemy[enemy]);
             }
 
@@ -77,7 +77,7 @@ module scenes {
 
         // PLAY Scene updates here
         public update(): void {
-            this._desert.update();
+            this._space.update();
             this._artifact.update();
 
             this._player.update();
