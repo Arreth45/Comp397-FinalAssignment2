@@ -90,6 +90,11 @@ module scenes {
             this._collision.check(this._artifact);
 
             this._updateScore();
+            
+             if (scoreValue > 2000) {
+                scene = config.Scene.LEVEL3;
+                changeScene();
+            }
         }
 
 

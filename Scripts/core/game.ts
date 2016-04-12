@@ -18,6 +18,7 @@ var menu: scenes.Menu;
 var instruction: scenes.Instruction;
 var play: scenes.Play;
 var level2: scenes.Level2;
+var level3: scenes.Level3;
 var end: scenes.End;
 var exit: scenes.Exit;
 
@@ -130,6 +131,13 @@ function changeScene(): void {
             level2 = new scenes.Level2();
             currentScene = level2;
             console.log("Starting LEVEL2 Scene");
+            break;
+        case config.Scene.LEVEL3:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            level3 = new scenes.Level3();
+            currentScene = level3;
+            console.log("Starting LEVEL3 Scene");
             break;
         case config.Scene.END:
             // show the END scene

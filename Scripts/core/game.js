@@ -14,6 +14,7 @@ var menu;
 var instruction;
 var play;
 var level2;
+var level3;
 var end;
 var exit;
 var assetData = [
@@ -110,6 +111,13 @@ function changeScene() {
             level2 = new scenes.Level2();
             currentScene = level2;
             console.log("Starting LEVEL2 Scene");
+            break;
+        case config.Scene.LEVEL3:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            level3 = new scenes.Level3();
+            currentScene = level3;
+            console.log("Starting LEVEL3 Scene");
             break;
         case config.Scene.END:
             // show the END scene
