@@ -18,7 +18,7 @@ var scenes;
             this._background = new objects.GameObject("background");
             this.addChild(this._background);
             //Add Menu Label
-            this._menuLabel = new objects.Label("Jet Fighter", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
+            this._menuLabel = new objects.Label("Jet Fighter", "100px Impact", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
             this.addChild(this._menuLabel);
             // add the Start button to the MENU scene
             this._startButton = new objects.Button("StartButton", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 180, true);

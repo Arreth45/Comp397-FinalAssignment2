@@ -39,9 +39,9 @@ var scenes;
                 this._enemy[enemy] = new objects.Enemy2();
                 this.addChild(this._enemy[enemy]);
             }
-            this._livesLabel = new objects.Label("lives: " + livesValue, "40px Consolas", "#ffff00", 10, 10, false);
+            this._livesLabel = new objects.Label("lives: " + livesValue, "40px Impact", "#ffff00", 10, 10, false);
             this.addChild(this._livesLabel);
-            this._scoreLabel = new objects.Label("Score: " + scoreValue, "40px Consolas", "#ffff00", 390, 10, false);
+            this._scoreLabel = new objects.Label("Score: " + scoreValue, "40px Impact", "#ffff00", 390, 10, false);
             this.addChild(this._scoreLabel);
             // added collision manager to the scene
             this._collision = new managers.Collision(this._player);

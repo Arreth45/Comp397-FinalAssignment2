@@ -21,12 +21,12 @@ var scenes;
             this._background = new objects.GameObject("background");
             this.addChild(this._background);
             //Add Menu Label
-            this._endLabel = new objects.Label("Game Over", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 160, true);
+            this._endLabel = new objects.Label("Game Over", "80px Impact", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 160, true);
             this.addChild(this._endLabel);
-            this._scoreLabel = new objects.Label("Your Score: " + scoreValue, "40px Consolas", "#ffff00", config.Screen.CENTER_X, config.Screen.CENTER_Y - 80, true);
+            this._scoreLabel = new objects.Label("Your Score: " + scoreValue, "50px Impact", "#ffff00", config.Screen.CENTER_X, config.Screen.CENTER_Y - 80, true);
             this.addChild(this._scoreLabel);
             //Add HighScore Label
-            this._highScoreLabel = new objects.Label("High Score: " + highScoreValue, "40px Consolas", "#ffff00", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
+            this._highScoreLabel = new objects.Label("High Score: " + highScoreValue, "50px Impact", "#ffff00", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
             this.addChild(this._highScoreLabel);
             // add the BACK button to the OVER scene
             this._restartButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180, true);

@@ -18,11 +18,11 @@ var scenes;
             this._background = new objects.GameObject("background");
             this.addChild(this._background);
             //Add Menu Label
-            this._menuLabel = new objects.Label("Instructions:", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 200, true);
+            this._menuLabel = new objects.Label("Instructions:", "80px Impact", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 200, true);
             this.addChild(this._menuLabel);
-            this._instructions1 = new objects.Label("Avoid the Enemy Jets", "50px Consolas", "#0000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 150, true);
+            this._instructions1 = new objects.Label("Avoid the Enemy Jets", "60px Impact", "#0000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 150, true);
             this.addChild(this._instructions1);
-            this._instructions2 = new objects.Label("Collect the Black Boxes", "50px Consolas", "#0000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 110, true);
+            this._instructions2 = new objects.Label("Collect the Collectable", "50px Impact", "#0000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 110, true);
             this.addChild(this._instructions2);
             // add the Start button to the MENU scene
             this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180, true);

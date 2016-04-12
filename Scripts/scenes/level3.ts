@@ -54,7 +54,7 @@ module scenes {
 
             this._livesLabel = new objects.Label(
                 "lives: " + livesValue,
-                "40px Consolas",
+                "40px Impact",
                 "#ffff00",
                 10, 10, false
             );
@@ -62,7 +62,7 @@ module scenes {
 
             this._scoreLabel = new objects.Label(
                 "Score: " + scoreValue,
-                "40px Consolas",
+                "40px Impact",
                 "#ffff00",
                 390, 10, false
             );

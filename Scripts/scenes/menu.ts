@@ -25,7 +25,7 @@ module scenes {
             
             //Add Menu Label
             this._menuLabel = new objects.Label(
-                "Jet Fighter", "60px Consolas",
+                "Jet Fighter", "100px Impact",
                 "#000000",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
             this.addChild(this._menuLabel);
