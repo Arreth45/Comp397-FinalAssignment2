@@ -38,6 +38,10 @@ module managers {
                         createjs.Sound.play("pickup");
                         scoreValue += 100;
                     }
+                     if (object.name === "atom") {
+                        createjs.Sound.play("pickup");
+                        scoreValue += 100;
+                    }
 
                     // check if it's a enemy hit
                     if (object.name === "enemy1") {
@@ -49,6 +53,14 @@ module managers {
                         }
                     }
                     if (object.name === "enemy2") {
+                        createjs.Sound.play("explosion");
+                        livesValue--;
+                        if (livesValue <= 0) {
+                            scene = config.Scene.END;
+                            changeScene();
+                        }
+                    }
+                     if (object.name === "enemy3") {
                         createjs.Sound.play("explosion");
                         livesValue--;
                         if (livesValue <= 0) {

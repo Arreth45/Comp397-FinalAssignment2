@@ -3,7 +3,7 @@ module scenes {
     export class Level3 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _space: objects.Space;
-        private _artifact: objects.Artifact;
+        private _atom: objects.Atom;
         private _enemy: objects.Enemy3[];
         private _enemyCount: number;
         private _player: objects.Player;
@@ -39,8 +39,8 @@ module scenes {
             this.addChild(this._space);
 
             // added island to the scene
-            this._artifact = new objects.Artifact();
-            this.addChild(this._artifact);
+            this._atom = new objects.Atom();
+            this.addChild(this._atom);
 
             // added player to the scene
             this._player = new objects.Player();
@@ -78,7 +78,7 @@ module scenes {
         // PLAY Scene updates here
         public update(): void {
             this._space.update();
-            this._artifact.update();
+            this._atom.update();
 
             this._player.update();
 
@@ -87,7 +87,7 @@ module scenes {
                 this._collision.check(enemy);
             });
 
-            this._collision.check(this._artifact);
+            this._collision.check(this._atom);
 
             this._updateScore();
         }

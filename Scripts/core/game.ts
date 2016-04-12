@@ -37,6 +37,7 @@ var assetData: objects.Asset[] = [
     { id: "enemy3", src: "../../Assets/images/UFO.png" },
     { id: "blackBox", src: "../../Assets/images/blackBox.png" },
     { id: "artifact", src: "../../Assets/images/artifact.png" },
+    { id: "atom", src: "../../Assets/images/atom.png" },
     { id: "background", src: "../../Assets/images/background.png" },
     { id: "pickup", src: "../../Assets/audio/pickup.mp3" },
     { id: "explosion", src: "../../Assets/audio/explosion.mp3" },
