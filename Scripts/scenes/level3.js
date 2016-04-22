@@ -22,7 +22,7 @@ var scenes;
             // Set Cloud Count
             this._enemyCount = 3;
             livesValue = 5;
-            scoreValue = 0;
+            scoreValue = 1500;
             // Instantiate Cloud array
             this._enemy = new Array();
             // added ocean to the scene
